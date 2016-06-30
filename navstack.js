@@ -1115,10 +1115,6 @@
 
   Navstack.adaptors.ractive = buildAdaptor({
     el: function (obj) {
-      var el = obj.find('*');
-      if (el) return el;
-
-      // ractive 0.5+ doesn't render the elements by default
       var fragment = document.createDocumentFragment();
       obj.render(fragment);
       return obj.find('*');
